@@ -1,0 +1,393 @@
+/* ============================================================
+   RESPONSIVE — Laser Quest Boulogne
+   ============================================================ */
+
+/* ── Breakpoints
+   xs:   < 480px
+   sm:   480px – 640px
+   md:   640px – 768px
+   lg:   768px – 1024px
+   xl:   1024px – 1280px
+   2xl:  > 1280px
+   ── */
+
+/* ── Large Desktop ── */
+@media (max-width: 1280px) {
+  :root {
+    --section-padding: 5rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  }
+}
+
+/* ── Desktop / Large Tablet ── */
+@media (max-width: 1024px) {
+  :root {
+    --section-padding: 4rem;
+  }
+
+  h1 { font-size: var(--font-size-4xl); }
+  h2 { font-size: var(--font-size-2xl); }
+
+  .section-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  /* Grid adjustments */
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+  }
+
+  .steps-grid::before {
+    display: none;
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  .pricing-card.featured {
+    transform: none;
+    grid-column: span 2;
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .what-is-section {
+    gap: var(--space-10);
+  }
+
+  /* Navbar */
+  .navbar-nav {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+}
+
+/* ── Tablet ── */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 3rem;
+    --navbar-height: 64px;
+  }
+
+  .container {
+    padding: 0 var(--space-5);
+  }
+
+  /* Typography */
+  h1 { font-size: var(--font-size-3xl); }
+  h2 { font-size: var(--font-size-2xl); }
+  h3 { font-size: var(--font-size-xl); }
+
+  .section-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .hero-title {
+    font-size: clamp(1.75rem, 6vw, 3rem);
+  }
+
+  /* Layout */
+  .what-is-section {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .what-is-visual {
+    order: -1;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card.featured {
+    grid-column: span 1;
+    max-width: none;
+    transform: none;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: auto;
+    padding: var(--space-12) 0;
+  }
+
+  .hero-content {
+    text-align: center;
+    padding-top: calc(var(--navbar-height) + var(--space-10));
+    padding-bottom: var(--space-16);
+  }
+
+  .hero-description {
+    margin: 0 auto var(--space-8);
+  }
+
+  .hero-ctas {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    gap: var(--space-8);
+  }
+
+  .hero-visual {
+    margin-top: var(--space-10);
+  }
+
+  .hero-arena {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  /* Features strip */
+  .features-strip-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+
+  /* CTA Banner */
+  .cta-banner {
+    padding: var(--space-10) var(--space-6);
+  }
+
+  .cta-banner-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .cta-banner-actions {
+    flex-direction: column;
+  }
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand {
+    grid-column: span 1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-legal {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Navbar */
+  .navbar-inner {
+    padding: 0 var(--space-5);
+  }
+
+  .navbar-actions .btn {
+    display: none;
+  }
+
+  /* Back to Top */
+  .back-to-top {
+    bottom: var(--space-5);
+    right: var(--space-5);
+  }
+
+  /* Page Hero */
+  .page-hero {
+    padding-top: calc(var(--navbar-height) + var(--space-12));
+    padding-bottom: var(--space-12);
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 2.5rem;
+  }
+
+  .container {
+    padding: 0 var(--space-4);
+  }
+
+  h1 { font-size: var(--font-size-2xl); }
+  h2 { font-size: var(--font-size-xl); }
+
+  .section-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .hero-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .hero-eyebrow {
+    justify-content: center;
+  }
+
+  .hero-eyebrow::before,
+  .hero-eyebrow::after {
+    width: 20px;
+  }
+
+  .section-label {
+    font-size: 0.65rem;
+  }
+
+  /* Buttons */
+  .btn-lg {
+    padding: var(--space-3) var(--space-8);
+    font-size: var(--font-size-base);
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* Stats */
+  .hero-stats {
+    gap: var(--space-6);
+  }
+
+  .hero-stat-number {
+    font-size: var(--font-size-2xl);
+  }
+
+  /* Cards */
+  .card,
+  .service-card,
+  .pricing-card,
+  .package-card .package-body,
+  .package-card .package-header {
+    padding: var(--space-6);
+  }
+
+  .contact-info-card {
+    padding: var(--space-6);
+  }
+
+  /* Pricing */
+  .pricing-price {
+    font-size: var(--font-size-4xl);
+  }
+
+  /* Hours table */
+  .hours-table th,
+  .hours-table td {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  /* Footer */
+  .footer-social {
+    flex-wrap: wrap;
+  }
+
+  .footer-links {
+    gap: var(--space-3);
+  }
+
+  /* Steps */
+  .step-number {
+    width: 64px;
+    height: 64px;
+    font-size: var(--font-size-xl);
+  }
+
+  /* Tabs */
+  .tabs {
+    gap: var(--space-1);
+  }
+
+  .tab-btn {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--font-size-xs);
+  }
+
+  /* mobile menu mobile layout */
+  .mobile-nav-link {
+    padding: var(--space-3) var(--space-4);
+  }
+}
+
+/* ── Print ── */
+@media print {
+  .navbar,
+  .mobile-menu,
+  .back-to-top,
+  .theme-toggle,
+  .burger,
+  .hero-bg,
+  .scan-line {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .hero {
+    min-height: auto;
+    background: none;
+  }
+
+  .section {
+    page-break-inside: avoid;
+  }
+}

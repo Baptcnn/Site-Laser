@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laser Quest Boulogne — Laser Game à Boulogne-sur-Mer | Saint-Léonard</title>
+  <meta name="description" content="Laser Quest Boulogne : labyrinthe laser de 500 m² sur 3 niveaux à Saint-Léonard. Idéal pour anniversaires, groupes, team building et séminaires. Réservez maintenant !" />
+  <meta name="keywords" content="laser quest boulogne, laser game boulogne sur mer, laser quest saint leonard, laser game anniversaire, laser game groupe, team building boulogne" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Laser Quest Boulogne" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://boulogne.laserquest.fr/" />
+  <meta property="og:title"       content="Laser Quest Boulogne — Laser Game à Boulogne-sur-Mer" />
+  <meta property="og:description" content="Labyrinthe laser de 500 m² sur 3 niveaux. Anniversaires, groupes, séminaires. Venez vivre l'expérience !" />
+  <meta property="og:image"       content="https://boulogne.laserquest.fr/assets/img/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Laser Quest Boulogne" />
+  <meta name="twitter:description" content="Laser Game à Boulogne-sur-Mer — 500 m² sur 3 niveaux !" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://boulogne.laserquest.fr/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Theme (load early to prevent flash) -->
+  <script src="js/theme-toggle.js"></script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EntertainmentBusiness",
+    "name": "Laser Quest Boulogne",
+    "description": "Laser Game à Boulogne-sur-Mer — labyrinthe de 500 m² sur 3 niveaux",
+    "url": "https://boulogne.laserquest.fr",
+    "telephone": "+33391180973",
+    "email": "boulogne@laserquest.fr",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "83 Boulevard de la Liane",
+      "addressLocality": "Saint-Léonard",
+      "postalCode": "62360",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "50.6806",
+      "longitude": "1.6060"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Thursday"], "opens": "14:00", "closes": "22:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "20:30", "closes": "23:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "14:00", "closes": "00:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "14:00", "closes": "18:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "14:00", "closes": "22:30" }
+    ],
+    "priceRange": "€€",
+    "sameAs": [
+      "https://www.instagram.com/laserquest.boulogne/",
+      "https://twitter.com/boulognelaser"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Scan Line Decoration -->
+  <div class="scan-line" aria-hidden="true"></div>
+
+  <!-- ────── NAVBAR ────── -->
+  <nav class="navbar navbar-transparent" role="navigation" aria-label="Navigation principale">
+    <div class="navbar-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="navbar-logo" aria-label="Laser Quest Boulogne — Accueil">
+        <div class="navbar-logo-icon" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="19" stroke="url(#logoGrad)" stroke-width="2"/>
+            <path d="M10 20 L20 8 L30 20 L20 32 Z" fill="url(#logoGrad)" opacity="0.8"/>
+            <circle cx="20" cy="20" r="5" fill="url(#logoGrad)"/>
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
+                <stop offset="0%" stop-color="#ff2d2d"/>
+                <stop offset="100%" stop-color="#ff6b35"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="navbar-logo-text">
+          <span class="navbar-logo-title">LASER QUEST</span>
+          <span class="navbar-logo-subtitle">Boulogne-sur-Mer</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="navbar-nav" role="list">
+        <li><a href="index.html"       class="nav-link active">Accueil</a></li>
+        <li><a href="tarifs.html"      class="nav-link">Tarifs</a></li>
+        <li><a href="anniversaire.html" class="nav-link">Anniversaires</a></li>
+        <li><a href="groupes.html"     class="nav-link">Groupes</a></li>
+        <li><a href="seminaires.html"  class="nav-link">Séminaires</a></li>
+        <li><a href="contact.html"     class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="navbar-actions">
+        <button class="theme-toggle" aria-label="Passer en mode clair" title="Mode clair">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" style="display:none" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="reservation.html" class="btn btn-primary btn-sm">Réserver</a>
+      </div>
+
+      <!-- Burger -->
+      <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- ────── MOBILE MENU ────── -->
+  <div class="mobile-menu" role="dialog" aria-label="Menu mobile">
+    <a href="index.html"        class="mobile-nav-link active"><span class="nav-icon">🏠</span> Accueil</a>
+    <a href="tarifs.html"       class="mobile-nav-link"><span class="nav-icon">💶</span> Tarifs &amp; Horaires</a>
+    <a href="anniversaire.html" class="mobile-nav-link"><span class="nav-icon">🎂</span> Anniversaires</a>
+    <a href="groupes.html"      class="mobile-nav-link"><span class="nav-icon">👥</span> Groupes</a>
+    <a href="seminaires.html"   class="mobile-nav-link"><span class="nav-icon">🏢</span> Séminaires</a>
+    <a href="contact.html"      class="mobile-nav-link"><span class="nav-icon">📍</span> Contact</a>
+    <div class="mobile-menu-divider"></div>
+    <a href="reservation.html"  class="btn btn-primary mobile-menu-cta">🎯 Réserver maintenant</a>
+  </div>
+
+  <!-- ────── HERO ────── -->
+  <header class="hero" role="banner">
+    <div class="hero-bg">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+    </div>
+
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+
+        <div class="hero-content animate-fade-in-up">
+          <div class="hero-eyebrow" aria-label="Catégorie">
+            Laser Game · Boulogne-sur-Mer
+          </div>
+
+          <h1 class="hero-title">
+            Entrez dans
+            <span class="text-gradient">l'arène laser</span>
+            et combattez !
+          </h1>
+
+          <p class="hero-description">
+            500 m² de labyrinthe sur 3 niveaux à Saint-Léonard.
+            Vivez une expérience unique de combat laser en équipe — pour les anniversaires,
+            groupes, team building et soirées entre amis.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="reservation.html" class="btn btn-primary btn-lg">
+              🎯 Réserver maintenant
+            </a>
+            <a href="tarifs.html" class="btn btn-secondary btn-lg">
+              Voir les tarifs
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-number" data-count="500" data-suffix=" m²">500 m²</span>
+              <span class="hero-stat-label">de labyrinthe</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-number" data-count="3" data-suffix=" niveaux">3 niveaux</span>
+              <span class="hero-stat-label">d'intensité</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-number" data-count="20" data-suffix=" min">20 min</span>
+              <span class="hero-stat-label">par partie</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual -->
+        <div class="hero-visual animate-fade-in-right" style="transition-delay:0.2s">
+          <div class="hero-arena" aria-hidden="true">
+            <div class="arena-ring arena-ring-1"></div>
+            <div class="arena-ring arena-ring-2"></div>
+            <div class="arena-ring arena-ring-3"></div>
+            <!-- Laser beams -->
+            <div class="laser-beam laser-beam-1"></div>
+            <div class="laser-beam laser-beam-2"></div>
+            <div class="laser-beam laser-beam-blue" style="top:45%"></div>
+            <div class="arena-center">
+              <span class="arena-center-icon">🎯</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ────── FEATURES STRIP ────── -->
+  <div class="features-strip">
+    <div class="container">
+      <div class="features-strip-inner">
+        <div class="feature-strip-item">
+          <span class="icon">📍</span>
+          <span>83 Bd de la Liane, Saint-Léonard</span>
+        </div>
+        <div class="feature-strip-item">
+          <span class="icon">📞</span>
+          <span>03 91 18 09 73</span>
+        </div>
+        <div class="feature-strip-item">
+          <span class="icon">👥</span>
+          <span>À partir de 2 joueurs</span>
+        </div>
+        <div class="feature-strip-item">
+          <span class="icon">🎂</span>
+          <span>Anniversaires &amp; groupes</span>
+        </div>
+        <div class="feature-strip-item">
+          <span class="icon">🚀</span>
+          <span>Laser Road — on vient chez vous</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ────── WHAT IS LASER QUEST ────── -->
+  <section class="section section-dark" aria-labelledby="what-is-title">
+    <div class="container">
+      <div class="what-is-section">
+
+        <div class="what-is-content reveal-left">
+          <div class="section-label">Le Concept</div>
+          <h2 id="what-is-title" class="section-title">
+            Qu'est-ce que le
+            <span class="text-gradient">Laser Quest</span> ?
+          </h2>
+          <p style="margin-bottom:1.5rem;">
+            Le Laser Quest est un jeu de combat laser en équipe dans un labyrinthe
+            futuriste plongé dans l'obscurité. Équipés d'un gilet (plastron) et d'un
+            pistolet laser, les joueurs s'affrontent pendant 20 minutes dans notre
+            arène de 500 m² répartis sur 3 niveaux.
+          </p>
+          <p style="margin-bottom:2rem;">
+            L'objectif : marquer le maximum de points en touchant les cibles
+            adverses tout en évitant d'être touché. Stratégie, agilité et travail
+            d'équipe sont les clés de la victoire !
+          </p>
+
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon" aria-hidden="true">🏟️</div>
+              <div class="feature-text">
+                <h4>500 m² sur 3 niveaux</h4>
+                <p>Un labyrinthe immersif avec rampes, passerelles et zones de jeu variées.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon" aria-hidden="true">🔫</div>
+              <div class="feature-text">
+                <h4>Équipement professionnel</h4>
+                <p>Plastrons et pistolets laser haute précision, pour 2 à 30 joueurs simultanément.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon" aria-hidden="true">📊</div>
+              <div class="feature-text">
+                <h4>Scores &amp; classement</h4>
+                <p>Un système de scoring informatisé affiche les résultats en temps réel.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="what-is-visual reveal-right" style="transition-delay:0.2s">
+          <div class="what-is-image-wrapper">
+            <!-- SVG Arena Illustration -->
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" width="100%" aria-label="Illustration d'une arène laser">
+              <!-- Background -->
+              <rect width="400" height="300" fill="#0a0a14"/>
+              <!-- Grid -->
+              <defs>
+                <pattern id="grid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,45,45,0.08)" stroke-width="0.5"/>
+                </pattern>
+                <linearGradient id="laserGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="transparent"/>
+                  <stop offset="50%" stop-color="#ff2d2d" stop-opacity="0.8"/>
+                  <stop offset="100%" stop-color="transparent"/>
+                </linearGradient>
+                <linearGradient id="laserBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="transparent"/>
+                  <stop offset="50%" stop-color="#00d4ff" stop-opacity="0.6"/>
+                  <stop offset="100%" stop-color="transparent"/>
+                </linearGradient>
+              </defs>
+              <rect width="400" height="300" fill="url(#grid)"/>
+              <!-- Arena walls -->
+              <rect x="30" y="30" width="340" height="240" rx="8" fill="none" stroke="rgba(255,45,45,0.2)" stroke-width="1.5"/>
+              <!-- Inner walls / labyrinth -->
+              <rect x="80" y="60" width="80" height="8" fill="rgba(100,100,200,0.3)" rx="2"/>
+              <rect x="240" y="60" width="80" height="8" fill="rgba(100,100,200,0.3)" rx="2"/>
+              <rect x="80" y="120" width="8" height="80" fill="rgba(100,100,200,0.3)" rx="2"/>
+              <rect x="312" y="120" width="8" height="80" fill="rgba(100,100,200,0.3)" rx="2"/>
+              <rect x="140" y="160" width="120" height="8" fill="rgba(100,100,200,0.3)" rx="2"/>
+              <rect x="140" y="80" width="8" height="60" fill="rgba(100,100,200,0.3)" rx="2"/>
+              <rect x="252" y="80" width="8" height="60" fill="rgba(100,100,200,0.3)" rx="2"/>
+              <!-- Laser beams -->
+              <line x1="0" y1="95" x2="400" y2="95" stroke="url(#laserGrad)" stroke-width="1.5" opacity="0.7"/>
+              <line x1="0" y1="190" x2="400" y2="190" stroke="url(#laserBlue)" stroke-width="1" opacity="0.5"/>
+              <line x1="200" y1="0" x2="200" y2="300" stroke="url(#laserGrad)" stroke-width="1" opacity="0.4" transform="rotate(0)"/>
+              <!-- Players -->
+              <circle cx="110" cy="150" r="8" fill="#ff2d2d" opacity="0.9"/>
+              <circle cx="110" cy="150" r="12" fill="none" stroke="#ff2d2d" stroke-width="1" opacity="0.4"/>
+              <circle cx="290" cy="150" r="8" fill="#00d4ff" opacity="0.9"/>
+              <circle cx="290" cy="150" r="12" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+              <circle cx="200" cy="90" r="6" fill="#ff6b35" opacity="0.8"/>
+              <circle cx="160" cy="210" r="6" fill="#ff2d2d" opacity="0.8"/>
+              <circle cx="240" cy="210" r="6" fill="#00d4ff" opacity="0.8"/>
+              <!-- Score panel -->
+              <rect x="160" y="130" width="80" height="40" rx="6" fill="rgba(255,45,45,0.1)" stroke="rgba(255,45,45,0.3)" stroke-width="1"/>
+              <text x="200" y="148" fill="#ff2d2d" font-size="8" text-anchor="middle" font-family="monospace">SCORE</text>
+              <text x="200" y="162" fill="#ffffff" font-size="10" text-anchor="middle" font-family="monospace" font-weight="bold">1240 pts</text>
+              <!-- Glow effect center -->
+              <circle cx="200" cy="150" r="60" fill="radial-gradient(circle, rgba(255,45,45,0.05), transparent)"/>
+            </svg>
+
+            <div class="what-is-badge">
+              <span class="what-is-badge-icon" aria-hidden="true">🎯</span>
+              <div>
+                <div class="what-is-badge-text">Partie de 20 min</div>
+                <div class="what-is-badge-sub">2 à 30 joueurs simultanés</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ────── SERVICES OVERVIEW ────── -->
+  <section class="section" aria-labelledby="services-title">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:3rem">
+        <div class="section-label">Nos Formules</div>
+        <h2 id="services-title" class="section-title">
+          Une expérience pour
+          <span class="text-gradient">chaque occasion</span>
+        </h2>
+        <p class="section-subtitle" style="margin:0 auto">
+          Du simple plaisir entre amis aux événements d'entreprise, nous avons la formule qu'il vous faut.
+        </p>
+      </div>
+
+      <div class="grid grid-3" style="gap:1.5rem">
+
+        <a href="anniversaire.html" class="service-card reveal delay-100" aria-label="Anniversaires enfants">
+          <div class="service-card-icon" aria-hidden="true">🎂</div>
+          <h3>Anniversaires</h3>
+          <p>Offrez à votre enfant un anniversaire inoubliable ! Formule tout compris avec laser, boissons et bonbons. Cartons d'invitation disponibles.</p>
+          <div class="service-card-link">En savoir plus <span aria-hidden="true">→</span></div>
+        </a>
+
+        <a href="groupes.html" class="service-card reveal delay-200" aria-label="Groupes et EVG">
+          <div class="service-card-icon" aria-hidden="true">👥</div>
+          <h3>Groupes &amp; EVG</h3>
+          <p>Enterrement de vie de garçon, soirée entre amis, sortie scolaire… Formules spéciales groupes avec déguisements fluo et surprises !</p>
+          <div class="service-card-link">En savoir plus <span aria-hidden="true">→</span></div>
+        </a>
+
+        <a href="seminaires.html" class="service-card reveal delay-300" aria-label="Séminaires entreprises">
+          <div class="service-card-icon blue" aria-hidden="true">🏢</div>
+          <h3>Séminaires &amp; Team Building</h3>
+          <p>Renforcez la cohésion de vos équipes avec une activité originale. Salle de réception, partenaires traiteurs, jusqu'à 50 personnes.</p>
+          <div class="service-card-link" style="color:var(--color-accent-blue)">En savoir plus <span aria-hidden="true">→</span></div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ────── HOW IT WORKS ────── -->
+  <section class="section section-alt" aria-labelledby="how-title">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:3rem">
+        <div class="section-label">Comment ça marche</div>
+        <h2 id="how-title" class="section-title">
+          En <span class="text-gradient">4 étapes</span> simples
+        </h2>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card reveal delay-100">
+          <div class="step-number">
+            <span class="step-icon" aria-hidden="true">📋</span>
+          </div>
+          <h3>Réservez</h3>
+          <p>Réservez en ligne ou par téléphone pour garantir votre créneau. Parfait pour les groupes !</p>
+        </div>
+
+        <div class="step-card reveal delay-200">
+          <div class="step-number">
+            <span class="step-icon" aria-hidden="true">🦺</span>
+          </div>
+          <h3>Équipez-vous</h3>
+          <p>Enfilez votre plastron et récupérez votre pistolet laser. Notre équipe vous explique les règles.</p>
+        </div>
+
+        <div class="step-card reveal delay-300">
+          <div class="step-number">
+            <span class="step-icon" aria-hidden="true">🏃</span>
+          </div>
+          <h3>Combattez !</h3>
+          <p>20 minutes d'intense combat laser dans notre labyrinthe obscur sur 3 niveaux. Maximum d'adrénaline !</p>
+        </div>
+
+        <div class="step-card reveal delay-400">
+          <div class="step-number">
+            <span class="step-icon" aria-hidden="true">🏆</span>
+          </div>
+          <h3>Classement</h3>
+          <p>Consultez votre score et votre classement sur notre écran. Le meilleur joueur remporte la gloire !</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────── LASER ROAD ────── -->
+  <section class="section section-dark" aria-labelledby="laserroad-title">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+
+        <div class="reveal-left">
+          <div class="section-label" style="color:var(--color-accent-blue);background:rgba(0,212,255,0.08);border-color:rgba(0,212,255,0.2)">
+            Nouveau Service
+          </div>
+          <h2 id="laserroad-title" class="section-title">
+            <span class="text-gradient-blue">Laser Road</span> —
+            on vient chez vous !
+          </h2>
+          <p style="margin-bottom:1.5rem;">
+            Vous n'avez pas à vous déplacer ! Avec notre service <strong>Laser Road</strong>,
+            nous venons installer notre labyrinthe gonflable directement chez vous —
+            dans votre jardin, un champ, une forêt ou un bâtiment.
+          </p>
+          <p style="margin-bottom:2rem;">
+            Idéal pour les centres aérés, anniversaires à domicile et événements d'entreprise.
+            Jusqu'à 18 joueurs simultanément, location à la journée, intérieur ou extérieur.
+          </p>
+
+          <div class="highlight-box blue" style="margin-bottom:2rem">
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem">
+              <span style="font-size:1.25rem">🚀</span>
+              <strong>Plus de 50 joueurs en 3 heures !</strong>
+            </div>
+            <p style="font-size:0.875rem;margin:0;color:var(--color-text-muted)">
+              Structure gonflable, pistolets laser, arbitres… tout est inclus. Devis sur demande.
+            </p>
+          </div>
+
+          <a href="seminaires.html" class="btn btn-blue">Demander un devis</a>
+        </div>
+
+        <div class="reveal-right" style="transition-delay:0.2s">
+          <div class="grid grid-2" style="gap:1rem">
+            <div class="card" style="text-align:center">
+              <div style="font-size:2rem;margin-bottom:0.75rem">🏕️</div>
+              <h4 style="font-size:1rem;margin-bottom:0.25rem">En plein air</h4>
+              <p style="font-size:0.8rem">Jardin, forêt, champ… partout !</p>
+            </div>
+            <div class="card" style="text-align:center">
+              <div style="font-size:2rem;margin-bottom:0.75rem">🏢</div>
+              <h4 style="font-size:1rem;margin-bottom:0.25rem">En intérieur</h4>
+              <p style="font-size:0.8rem">Salle, entrepôt, gymnase…</p>
+            </div>
+            <div class="card" style="text-align:center">
+              <div style="font-size:2rem;margin-bottom:0.75rem">👥</div>
+              <h4 style="font-size:1rem;margin-bottom:0.25rem">Jusqu'à 18 joueurs</h4>
+              <p style="font-size:0.8rem">Simultanément sur le terrain</p>
+            </div>
+            <div class="card" style="text-align:center">
+              <div style="font-size:2rem;margin-bottom:0.75rem">📅</div>
+              <h4 style="font-size:1rem;margin-bottom:0.25rem">À la journée</h4>
+              <p style="font-size:0.8rem">Location flexible selon vos besoins</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ────── STATS ────── -->
+  <section class="section" aria-labelledby="stats-title">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:3rem">
+        <div class="section-label">En chiffres</div>
+        <h2 id="stats-title" class="section-title">
+          Le Laser Quest Boulogne
+          <span class="text-gradient">en chiffres</span>
+        </h2>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card reveal delay-100">
+          <div class="stat-number" data-count="500" data-suffix=" m²">500 m²</div>
+          <div class="stat-label">d'arène de jeu</div>
+        </div>
+        <div class="stat-card reveal delay-200">
+          <div class="stat-number" data-count="3" data-suffix=" niveaux">3 niveaux</div>
+          <div class="stat-label">dans le labyrinthe</div>
+        </div>
+        <div class="stat-card reveal delay-300">
+          <div class="stat-number" data-count="30" data-suffix=" joueurs">30 joueurs</div>
+          <div class="stat-label">maximum simultané</div>
+        </div>
+        <div class="stat-card reveal delay-400">
+          <div class="stat-number" data-count="20" data-suffix=" min">20 min</div>
+          <div class="stat-label">par partie intense</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────── TESTIMONIALS ────── -->
+  <section class="section section-dark" aria-labelledby="avis-title">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:3rem">
+        <div class="section-label">Avis clients</div>
+        <h2 id="avis-title" class="section-title">
+          Ce qu'ils <span class="text-gradient">en disent</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-3" style="gap:1.5rem">
+        <div class="testimonial-card reveal delay-100">
+          <div class="testimonial-stars" aria-label="5 étoiles">★★★★★</div>
+          <p class="testimonial-text">"Une expérience incroyable pour l'anniversaire de mon fils ! Le labyrinthe est immense, les enfants ont adoré. L'équipe est super sympa et accueillante."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">SM</div>
+            <div>
+              <div class="testimonial-name">Sophie M.</div>
+              <div class="testimonial-role">Anniversaire enfant, 10 ans</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal delay-200">
+          <div class="testimonial-stars" aria-label="5 étoiles">★★★★★</div>
+          <p class="testimonial-text">"Soirée EVG parfaite ! Les déguisements fluo, les parties illimitées en soirée… on a passé un moment exceptionnel. Le marié était aux anges. Merci !"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">TD</div>
+            <div>
+              <div class="testimonial-name">Thomas D.</div>
+              <div class="testimonial-role">Enterrement de vie de garçon</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal delay-300">
+          <div class="testimonial-stars" aria-label="5 étoiles">★★★★★</div>
+          <p class="testimonial-text">"Notre team building en entreprise était une vraie réussite grâce au Laser Quest ! L'équipe a adoré se défouler. Le Laser Road dans notre entrepôt était génial."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">JL</div>
+            <div>
+              <div class="testimonial-name">Julie L.</div>
+              <div class="testimonial-role">Responsable RH, entreprise locale</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────── PRICING TEASER ────── -->
+  <section class="section section-alt" aria-labelledby="prix-title">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:3rem">
+        <div class="section-label">Tarifs</div>
+        <h2 id="prix-title" class="section-title">
+          Des prix <span class="text-gradient">accessibles</span>
+        </h2>
+        <p class="section-subtitle" style="margin:0 auto 2rem">
+          À partir de 9 € la partie, avec des formules adaptées à toutes les occasions.
+        </p>
+      </div>
+
+      <div class="grid grid-3" style="gap:1.5rem;max-width:900px;margin:0 auto">
+        <div class="pricing-card reveal delay-100" style="text-align:center">
+          <div class="pricing-name">1 Partie</div>
+          <div class="pricing-price"><sup>€</sup>9</div>
+          <div class="pricing-per">par personne · 20 min</div>
+          <div class="pricing-divider"></div>
+          <p style="font-size:0.875rem;color:var(--color-text-muted);margin-bottom:1.5rem">L'entrée parfaite pour découvrir l'expérience !</p>
+          <a href="reservation.html" class="btn btn-secondary" style="width:100%">Réserver</a>
+        </div>
+
+        <div class="pricing-card featured reveal delay-200" style="text-align:center">
+          <div class="pricing-badge">Populaire</div>
+          <div class="pricing-name">2 Parties</div>
+          <div class="pricing-price"><sup>€</sup>15</div>
+          <div class="pricing-per">par personne · 40 min</div>
+          <div class="pricing-divider"></div>
+          <p style="font-size:0.875rem;color:var(--color-text-muted);margin-bottom:1.5rem">La formule idéale pour une bonne session de jeu !</p>
+          <a href="reservation.html" class="btn btn-primary" style="width:100%">Réserver</a>
+        </div>
+
+        <div class="pricing-card reveal delay-300" style="text-align:center">
+          <div class="pricing-name">3 Parties</div>
+          <div class="pricing-price"><sup>€</sup>21</div>
+          <div class="pricing-per">par personne · 60 min</div>
+          <div class="pricing-divider"></div>
+          <p style="font-size:0.875rem;color:var(--color-text-muted);margin-bottom:1.5rem">Pour les joueurs qui veulent tout donner !</p>
+          <a href="reservation.html" class="btn btn-secondary" style="width:100%">Réserver</a>
+        </div>
+      </div>
+
+      <div class="text-center reveal" style="margin-top:2rem">
+        <a href="tarifs.html" class="btn btn-outline-red">Voir tous les tarifs &amp; horaires →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────── CTA BANNER ────── -->
+  <section class="section" aria-labelledby="cta-title">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <div class="section-label" style="margin:0 auto 1rem">Prêt à jouer ?</div>
+        <h2 id="cta-title" class="cta-banner-title">
+          Réservez votre
+          <span class="text-gradient">session laser</span>
+          maintenant !
+        </h2>
+        <p class="cta-banner-subtitle">
+          Labyrinthe ouvert mardi, jeudi, vendredi, samedi et dimanche.
+          Tous les jours pendant les vacances scolaires.
+        </p>
+        <div class="cta-banner-actions">
+          <a href="reservation.html" class="btn btn-primary btn-lg">🎯 Réserver en ligne</a>
+          <a href="tel:0391180973"    class="btn btn-secondary btn-lg">📞 03 91 18 09 73</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────── FOOTER ────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Laser Quest Boulogne">
+            <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="20" cy="20" r="19" stroke="url(#fLogoGrad)" stroke-width="2"/>
+              <path d="M10 20 L20 8 L30 20 L20 32 Z" fill="url(#fLogoGrad)" opacity="0.8"/>
+              <circle cx="20" cy="20" r="5" fill="url(#fLogoGrad)"/>
+              <defs>
+                <linearGradient id="fLogoGrad" x1="0" y1="0" x2="40" y2="40">
+                  <stop offset="0%" stop-color="#ff2d2d"/>
+                  <stop offset="100%" stop-color="#ff6b35"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <span class="footer-logo-title">LASER QUEST</span>
+          </a>
+          <p>Le laser game de Boulogne-sur-Mer. 500 m² de labyrinthe sur 3 niveaux. Venez vivre l'expérience combat laser ultime !</p>
+          <div class="footer-social" aria-label="Réseaux sociaux">
+            <a href="https://www.instagram.com/laserquest.boulogne/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://twitter.com/boulognelaser" class="social-link" aria-label="Twitter/X" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="tarifs.html">Tarifs &amp; Horaires</a></li>
+            <li><a href="reservation.html">Réservation</a></li>
+            <li><a href="anniversaire.html">Anniversaires</a></li>
+            <li><a href="groupes.html">Groupes &amp; EVG</a></li>
+            <li><a href="seminaires.html">Séminaires</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Horaires</h4>
+          <div style="font-size:0.8rem;color:var(--color-text-muted)">
+            <p style="margin-bottom:0.5rem"><strong style="color:var(--color-text-primary)">Mar &amp; Jeu</strong> 14h–22h30</p>
+            <p style="margin-bottom:0.5rem"><strong style="color:var(--color-text-primary)">Mer</strong> 20h30–23h30</p>
+            <p style="margin-bottom:0.5rem"><strong style="color:var(--color-text-primary)">Ven</strong> 14h–minuit</p>
+            <p style="margin-bottom:0.5rem"><strong style="color:var(--color-text-primary)">Sam</strong> 14h–18h30</p>
+            <p style="margin-bottom:0.5rem"><strong style="color:var(--color-text-primary)">Dim</strong> 14h–22h30</p>
+            <p style="margin-bottom:0;color:var(--color-error);font-size:0.75rem">Fermé le lundi (hors vacances)</p>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <span class="icon" aria-hidden="true">📍</span>
+            <span>83 Bd de la Liane<br/>62360 Saint-Léonard</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="icon" aria-hidden="true">📞</span>
+            <a href="tel:0391180973" style="color:inherit;text-decoration:none">03 91 18 09 73</a>
+          </div>
+          <div class="footer-contact-item">
+            <span class="icon" aria-hidden="true">✉️</span>
+            <a href="mailto:boulogne@laserquest.fr" style="color:inherit;text-decoration:none">boulogne@laserquest.fr</a>
+          </div>
+          <div style="margin-top:1rem">
+            <a href="reservation.html" class="btn btn-primary btn-sm">Réserver</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2025 Laser Quest Boulogne — Tous droits réservés
+        </p>
+        <nav class="footer-legal" aria-label="Liens légaux">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="mentions-legales.html#cgv">CGV</a>
+          <a href="mentions-legales.html#confidentialite">Confidentialité</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ────── BACK TO TOP ────── -->
+  <button class="back-to-top" aria-label="Retour en haut de page" title="Retour en haut">
+    ↑
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/menu.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

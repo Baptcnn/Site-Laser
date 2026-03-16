@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Disallow admin/private paths (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://boulogne.laserquest.fr/sitemap.xml
+
+# Crawl delay (optional, be respectful of server resources)
+Crawl-delay: 1
