@@ -153,51 +153,62 @@ All content sourced from the actual Laser Quest Boulogne website and web searche
 - Cache headers: 1-year immutable cache for CSS/JS/assets
 - Redirect: `/horaires-tarifs` → `/tarifs` (from old URL structure)
 
-### Deploy to Vercel (recommended)
+### Déployer sur Vercel (recommandé)
 
-**Option A — CLI (requires token):**
+**Via GitHub Actions** (seule méthode fonctionnelle depuis le sandbox) :
+1. Ajouter le secret `VERCEL_TOKEN` dans GitHub → Settings → Secrets → Actions
+2. Le workflow `.github/workflows/vercel.yml` se déclenche automatiquement au push
+3. URL finale : `https://<project>.vercel.app`
+
+**Via le Dashboard Vercel (alternative manuelle)** :
+1. Aller sur https://vercel.com/new
+2. Importer le repo GitHub `Baptcnn/Site-Laser`
+3. Branche : `claude/website-analysis-redesign-Qf5oy`
+4. Framework preset : **Other** (HTML statique)
+5. Cliquer **Deploy**
+
+### GitHub Pages (gratuit, sans token)
+
+Workflow `.github/workflows/pages.yml` utilise `peaceiris/actions-gh-pages`.
+- Le workflow tourne avec succès et crée la branche `gh-pages` automatiquement ✓
+- Étape manuelle : Settings → Pages → Source → Deploy from branch → `gh-pages` → `/`
+- URL : `https://baptcnn.github.io/Site-Laser/`
+
+### Preview locale
 ```bash
-npm i -g vercel
-cd /home/user/Site-Laser
-vercel login          # authenticate once
-vercel --prod         # deploy to production
+npx serve .    # http://localhost:3000
 ```
+Toutes les pages répondent HTTP 200 ✓
 
-**Option B — Vercel Dashboard (easiest):**
-1. Go to https://vercel.com/new
-2. Import GitHub repo `Baptcnn/Site-Laser`
-3. Select branch `claude/website-analysis-redesign-Qf5oy`
-4. Framework preset: **Other** (static HTML)
-5. Root directory: `.` (project root)
-6. Click **Deploy** → production URL is generated automatically
+## Limitations réseau du sandbox Claude Code
 
-The `vercel.json` at the project root handles all routing, clean URLs, security headers, and caching.
+Points importants découverts lors du déploiement :
 
-### GitHub Pages (alternative)
+| Destination | Accessible | Raison |
+|------------|-----------|--------|
+| `api.github.com` | ✅ Oui | Dans la whitelist egress |
+| `github.com` (git push) | ✅ Oui | Via proxy local `127.0.0.1:35157` |
+| `api.vercel.com` | ❌ Non | 403 bloqué par proxy egress |
+| `api.netlify.com` | ❌ Non | 403 bloqué par proxy egress |
+| `baptcnn.github.io` | ❌ Non | `github.io` pas dans la whitelist |
+| `storage.googleapis.com` | ✅ Oui | Dans la whitelist |
 
-A GitHub Actions workflow is included at `.github/workflows/pages.yml`.
-To activate:
-1. Go to `github.com/Baptcnn/Site-Laser` → Settings → Pages
-2. Source: **GitHub Actions**
-3. The next push to `claude/website-analysis-redesign-Qf5oy` will trigger deployment
-4. URL: `https://baptcnn.github.io/Site-Laser/`
+**Contournement pour Vercel** : GitHub Actions (le runner GitHub peut accéder à Vercel).
 
-### Local Preview
-```bash
-npx serve .          # serves at http://localhost:3000
-# or
-python3 -m http.server 8080
-```
+**Push git** : uniquement vers les branches `claude/*` via le proxy local.
 
-All pages respond HTTP 200 (verified locally with `npx serve`).
+**GitHub API** : accessible via le proxy egress authentifié (`21.0.0.27:15004`), mais en lecture seule sans token GitHub. Les opérations d'écriture (activer Pages, créer secrets) nécessitent un token.
 
 ## Git Branch
 
 This work is on branch: `claude/website-analysis-redesign-Qf5oy`
 
-**Commits:**
+**Commits :**
 - `a8bf4c9` — feat: complete redesign of Laser Quest Boulogne website (20 files)
 - `c80f29b` — ci: add GitHub Pages deployment workflow
+- `aab2088` — docs: update CLAUDE.md with deployment instructions
+- `44762ad` — fix: use peaceiris/actions-gh-pages (no Pages pre-config required)
+- `4e1a23c` — ci: add Vercel deployment workflow via GitHub Actions
 
 ## File Count Summary
 
